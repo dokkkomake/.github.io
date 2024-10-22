@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon"> <!-- 실제 파비콘 경로로 변경 -->
+    <link rel="stylesheet" href="styles.css"> <!-- CSS 파일 연결 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $.get("https://ipinfo.io?token=b7da60f18ab745", function(response) {
+            // 일본에서 접속하면 일본어 페이지로 리디렉션
+            if (response.country === "JP") {
+                window.location.href = "japanese_version.html"; // 일본어 버전 URL
+            }
+        }, "jsonp");
+    });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <img src="images/profile.png" alt="프로필 이미지" class="profile-img"> <!-- 프로필 이미지 -->
+            <h1>독고제갈</h1> <!-- 이름 -->
+            <p>팬아트를 위주로 그리는 일러스트레이터입니다.<br>의뢰는 환영하며, 즐겁게 작업을 이어나가겠습니다. <br>무분별한 작업 요청은 받지 않습니다.<br>AI 학습에는 반대합니다.</p>
+        </div>
+        <div class="links">
+            <!-- X(구 트위터) 링크 -->
+            <a href="https://x.com/dokkkomake_p" class="button twitter" target="_blank">X (구 Twitter)</a>
+            <!-- 마시멜로 링크 -->
+            <a href="https://marshmallow-qa.com/bsdk53f1iyzi9ut?t=u5St0j&utm_medium=url_text&utm_source=promotion" class="button mashumaro" target="_blank">마슈마로</a>
+            <!-- Bluesky 링크 -->
+            <a href="https://bsky.app/profile/dokkkomake-p.bsky.social" class="button bluesky" target="_blank">Bluesky</a>
+            <!-- Pixiv 링크 -->
+            <a href="https://www.pixiv.net/users/110510510" class="button pixiv" target="_blank">Pixiv</a>
+        </div>
+        <!-- 저작권 정보 추가 -->
+        <div class="copyright">
+            <p>&copy; 2024 독고제갈. </p>
+        </div>
+    </div>
+</body>
+</html>
+
