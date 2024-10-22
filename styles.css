@@ -2,11 +2,38 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+}
+
+/* 한국어 폰트 설정 */
+body[lang="ko"] {
+    font-family: 'NanumSquareNeoOTF-Rg', sans-serif; /* 변경된 부분 */
+}
+
+/* 일본어 폰트 설정 */
+body[lang="ja"] {
+    font-family: 'MPLUS2-Medium', sans-serif;
+}
+
+/* 제목 폰트 설정 */
+h1[lang="ko"] {
+    font-family: 'NanumSquareNeoOTF-Bd', sans-serif; /* 변경된 부분 */
+}
+
+h1[lang="ja"] {
+    font-family: 'MPLUS2-ExtraBold', sans-serif;
+}
+
+/* 저작권 폰트 설정 */
+.copyright[lang="ko"] {
+    font-family: 'NanumSquareNeoOTF-Lt', sans-serif; /* 변경된 부분 */
+}
+
+.copyright[lang="ja"] {
+    font-family: 'MPLUS2-Light', sans-serif;
 }
 
 body {
-    background: linear-gradient(to bottom right, #e6e6e6, #ffe9c4); /* 그라데이션 배경 추가 */
+    background: linear-gradient(to bottom right, #e6e6e6, #ffe9c4);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,30 +42,30 @@ body {
 
 .container {
     background-color: #ffffff;
-    padding: 80px 60px 40px; /* 하단 패딩 조정 */
+    padding: 80px 60px 40px;
     border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(168, 153, 141, 0.3); /* 그림자 색상 변경 */
+    box-shadow: 0 4px 12px rgba(168, 153, 141, 0.3);
     text-align: center;
-    width: 500px; 
-    max-width: 90%; 
-    min-height: 600px; /* 최소 높이 유지 */
-    position: relative; /* 자식 요소를 절대 위치로 조정하기 위해 필요 */
+    width: 500px;
+    max-width: 90%;
+    min-height: 600px;
+    position: relative;
 }
 
 .profile-img {
     width: 100px;
     height: 100px;
-    border-radius: 80%; 
-    margin-bottom: 10px; /* 아래쪽 여백 줄임 */
-    background-color: #ccc; 
-    background-image: url('path/to/placeholder/image.png'); /* 여기에 실제 이미지 경로를 넣으세요 */
+    border-radius: 80%;
+    margin-bottom: 10px;
+    background-color: #ccc;
+    background-image: url('path/to/placeholder/image.png');
     background-size: cover;
     background-position: center;
 }
 
 h1 {
     font-size: 20px;
-    margin: 20px 0 15px; /* 아래쪽 여백 유지 */
+    margin: 20px 0 15px;
     color: #333;
 }
 
@@ -46,66 +73,57 @@ p {
     font-size: 13px;
     color: #555;
     line-height: 1.5;
-    margin-bottom: 28px; /* p 아래에 8px 추가 */
+    margin-bottom: 28px;
 }
 
 .links {
     display: flex;
     flex-direction: column;
-    gap: 8px; /* 버튼 간의 간격을 8px로 설정 */
+    gap: 8px;
 }
 
 .button {
-    padding: 17px; /* 위아래 여백을 5px 늘림 */
+    padding: 17px;
     border-radius: 8px;
     text-decoration: none;
     font-size: 16px;
     color: white;
     display: block;
     text-align: center;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* 변형 효과 추가 */
-    margin-top: 8px; /* 버튼 위쪽 여백 추가 */
-    background-color: #bfaea6; /* 버튼 색상 변경 */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 8px;
+    background-color: #bfaea6;
 }
 
 .button:hover {
     opacity: 0.8;
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
-/* 각 링크 버튼 위의 텍스트 여백 추가 */
-.links > p {
-    margin-bottom: 8px; /* 버튼 위의 텍스트와 버튼 사이에 8px 여백 추가 */
-}
-
-/* Pixiv 버튼과 저작권 사이 여백 추가 */
 .pixiv {
-    margin-bottom: 40px; /* Pixiv 버튼 아래에 여백 추가 */
+    margin-bottom: 40px;
 }
 
-/* 저작권 클래스 스타일 */
 .copyright {
-    position: absolute; /* 박스의 하단에 고정 */
-    bottom: 20px; /* 하단 여백 조정 */
-    left: 50%; /* 가운데 정렬을 위한 왼쪽 위치 */
-    transform: translateX(-50%); /* 가운데 정렬을 위한 변환 */
-    font-size: 12px; /* 글자 크기 */
-    color: rgba(119, 119, 119, 0.5); /* 색상 조정 (옅게) */
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: rgba(119, 119, 119, 0.5);
 }
 
 @media (max-width: 600px) {
     .container {
-        min-height: auto; /* 또는 더 작은 높이 값 */
+        min-height: auto;
     }
-}
-
 
     h1 {
-        font-size: 18px; 
+        font-size: 18px;
     }
 
     p {
-        font-size: 12px; 
+        font-size: 12px;
     }
 
     .button {
