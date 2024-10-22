@@ -93,11 +93,12 @@ p {
     color: rgba(119, 119, 119, 0.5); /* 색상 조정 (옅게) */
 }
 
-/* 반응형 디자인을 위한 미디어 쿼리 */
 @media (max-width: 600px) {
     .container {
-        padding: 40px 30px; 
+        min-height: auto; /* 또는 더 작은 높이 값 */
     }
+}
+
 
     h1 {
         font-size: 18px; 

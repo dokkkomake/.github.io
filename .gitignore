@@ -1,0 +1,29 @@
+# Node.js dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Logs
+logs
+*.log
+
+# Environment variables
+.env
+
+# IDE configurations
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# IDE specific configurations
+*.sublime-workspace
+*.sublime-project
+
+# Other files to ignore
+*.tmp
+*.bak
